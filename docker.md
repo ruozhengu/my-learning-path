@@ -3,17 +3,26 @@
 ---
 #### Terminology
 
-_**Keyword:** develop, deploy, and run_
+**Keyword:** develop, deploy, and run
+
 **Containerization:** use of linux container to deploy applications
+
 **Features of Docker:** lightweight, scalable, stackable(you can stack services vertically)
+
 **Image:** an executable package that includes everything needed to run an application-the code, a runtime, libraries, environment variabless and configuration files
+
 **Container:** a container is a runtime instance of an image(what image becomes in memory when executed). A container is launched by `running an image`.
+
 **Container & VM:** 
+
 * Container runs `natively` on linux and shares the kernel of host machine with other containers. It runs a discrete process, taking no more memory than any other executable, making it lightweight.
+
 * VM runs a full blown "guest" operating system with virtual access to host resources by hypervisor. VM provides environment with more resources than most application needs.
 
 **Arthitecture Difference:** docker eliminates the extra use of GuestOS. Everything works as docker containers
+
 **Docker Compose** is used to run multiple containers as a single service. For example, suppose you had an application which required NGNIX and MySQL, you could create one file which would start both the containers as a service without the need to start each one separately.
+
 #### Basic Commands
 
 ```
@@ -138,7 +147,7 @@ ENV NAME World
 # Run app.py when the container launches
 CMD ["python", "app.py"]
 ```
-`app.py` and `requirement.txt` are present becasue of `copy` command of Dockerfile and output of `app.py` is accessible over HTTP thanks to `Expost` command.
+`app.py` and `requirement.txt` are present becasue of `copy` command of Dockerfile and output of `app.py` is accessible over HTTP thanks to `Expose` command.
 
 requirements.txt
 ```
@@ -187,6 +196,7 @@ C. Docker push: push image to docker hub: `docker push Repositoryname `
 ```
 $ sudo docker push demousr/demorep:1.0 
 ```
+
 
 
 
